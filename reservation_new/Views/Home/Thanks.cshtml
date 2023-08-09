@@ -1,0 +1,28 @@
+﻿@model reservation_new.Models.GuestResponse
+<h1>This is a Thank You page!!</h1>
+<h2>Thank you @Model.name !! </h2>
+@{ var showstr = "";
+    if (Model.WillAttend == true)
+    {
+        showstr = " It is great that you are coming!! The drinks are already in the fridge!!";
+    }
+    else
+    {
+        showstr = "Sorry to hear that you can't make it, but thanks for letting us know.";
+    }
+}
+<p>@showstr</p>
+<P style="color: blue; font-size:larger;">
+    Click <a asp-action="ShowList">here</a> to
+    show who is coming!!
+</P>
+<P style="color: blue; font-size:larger;">
+    Click <a asp-action="toGuestResponse">here</a> to
+    show who is coming(db)!!
+</P>
+
+<p style="color:black; font-size:large;">
+    <a asp-action="ReserveForm">
+        Go Back to Reservation Form!!
+    </a>
+</p>

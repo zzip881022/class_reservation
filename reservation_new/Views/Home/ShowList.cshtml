@@ -1,0 +1,22 @@
+﻿@model IEnumerable<reservation_new.Models.GuestResponse>
+<Table>
+    <thead>
+        <tr style=“”>
+            <td>name</td>
+            <td>phone</td>
+            <td>email</td>
+            <td>Will Attend</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (reservation_new.Models.GuestResponse Guest in Model)
+        {
+            <tr>
+                <td>@Guest.name</td>
+                <td>@Guest.phone</td>
+                <td>@Guest.email</td>
+                <td>@Guest.WillAttend</td>
+            </tr>
+        }
+    </tbody>
+</Table>
